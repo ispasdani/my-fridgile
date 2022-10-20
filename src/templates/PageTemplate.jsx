@@ -1,6 +1,6 @@
 import { NavbarMobile } from "../components/navbarMobile/NavbarMobile";
 import { NavbarDesktop } from "../components/navbarDesktop/NavbarDesktop";
-import "./pageTemplate.css";
+import "./pagetemplate.css";
 
 const PageTemplate = (props) => {
   return (
