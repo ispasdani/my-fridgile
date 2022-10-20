@@ -7,7 +7,7 @@ export const ObjectDetector = () => {
   const [isModelling, setIsModelLoading] = useState(false);
   const [model, setModel] = useState(null);
   const [imageURL, setImageURL] = useState(null);
-  const [results, setResults] = useState("");
+  const [results, setResults] = useState([]);
 
   const imageRef = useRef();
 
@@ -60,14 +60,6 @@ export const ObjectDetector = () => {
       </div>
 
       <div>
-        {results && (
-          <div>
-            {" "}
-            {results.map((result) => {
-              console.log(result.className);
-            })}
-          </div>
-        )}
         {imageURL && (
           <img
             className="image"
@@ -86,6 +78,8 @@ export const ObjectDetector = () => {
             Identify Image
           </button>
         )}
+
+        {results.length > 0 && <div>{results[0].className}</div>}
       </div>
     </div>
   );

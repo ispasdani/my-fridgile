@@ -9,6 +9,7 @@ import fridgeIconOrange from "../../assets/icons/navIconsOrange/fridgeIconOrange
 import shoppingListIconOrange from "../../assets/icons/navIconsOrange/shoppingListIconOrange.svg";
 import recipesIconOrange from "../../assets/icons/navIconsOrange/recipesIconOrange.svg";
 import profileIconOrange from "../../assets/icons/navIconsOrange/profileIconOrange.svg";
+import { Link } from "react-router-dom";
 
 export const NavbarDesktop = () => {
   const [fridgeOnHover, setFridgeOnHover] = useState(false);
@@ -52,7 +53,9 @@ export const NavbarDesktop = () => {
       </div>
       <div className="NavBtnContainerDesktop NavBtnContainerMiddleDesktop">
         <p>Add Food</p>
-        <img src={addIcon} alt="" className="NavBtns NavBtnMiddleDesktop" />
+        <Link to="/my-fridgile/add">
+          <img src={addIcon} alt="" className="NavBtns NavBtnMiddleDesktop" />
+        </Link>
       </div>
       <div
         className="NavBtnContainerDesktop"
