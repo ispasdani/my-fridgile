@@ -1,0 +1,46 @@
+.app-widget {
+  width: 600px;
+  height: 250px;
+  float: right;
+  background-color: #ffdd7e;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  border: #ffdd7e 1px solid;
+  border-radius: 30px;
+}
+
+.app-widget .headline p {
+  font-size: 40px;
+  font-family: "Clash Display", sans-serif;
+  margin-left: 40px;
+  margin-bottom: -5px;
+  color: #2c2c2c;
+  margin-top: 30px;
+}
+
+.app-widget .b-text p {
+  font-family: "General Sans", sans-serif;
+  font-size: 16px;
+  text-align: left;
+  margin-left: 40px;
+  margin-right: 40px;
+  color: #2c2c2c;
+}
+
+.download-btn button {
+  margin-left: 10px;
+  background-color: #2c2c2c;
+  border: #2c2c2c solid 2px;
+  color: #fafafa;
+  font-family: "General Sans", sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  float: left;
+  margin-left: 40px;
+  margin-top: 10px;
+}

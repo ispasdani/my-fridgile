@@ -1,0 +1,36 @@
+.grid-container {
+  display: grid;
+  width: 40%;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 15px;
+  column-gap: 15px;
+}
+
+.left-side {
+  width: 50vw;
+  height: 100vh;
+  float: left;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.right-side {
+  width: 40vw;
+  height: 100vh;
+  float: right;
+  margin-right: 5%;
+}
+
+.headline p {
+  font-family: "Clash Display", sans-serif;
+  font-weight: 500;
+  font-size: 80px;
+  float: left;
+  margin-bottom: 30px;
+}
+
+.body-text p {
+  font-family: "General Sans", sans-serif;
+  float: left;
+  font-size: 16px;
+}

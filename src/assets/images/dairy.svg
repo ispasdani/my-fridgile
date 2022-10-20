@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71.62" height="74.018" viewBox="0 0 71.62 74.018">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.19" y1="0.892" x2="1.19" y2="0.108" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7aa8d7"/>
+      <stop offset="1" stop-color="#c3d2e7"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.148" y1="1.339" x2="0.867" y2="-0.304" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="0.5" y1="1" x2="0.5" y2="0" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-6" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d4d8e1"/>
+      <stop offset="1" stop-color="#f3f4f5"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-9" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#9dd5df"/>
+      <stop offset="1" stop-color="#c3e1f5"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_161" data-name="Group 161" transform="translate(-249.763 -914.667)">
+    <g id="Milk" transform="translate(249.763 914.667)">
+      <rect id="Rectangle_217" data-name="Rectangle 217" width="29.842" height="52.522" transform="translate(0 21.486)" fill="url(#linear-gradient)"/>
+      <path id="Path_1183" data-name="Path 1183" d="M40.2,5H11.549L2,21.711H31.842Z" transform="translate(-2 -0.225)" fill="url(#linear-gradient-2)"/>
+      <path id="Path_1184" data-name="Path 1184" d="M43.711,71.522H27V19H43.711Z" transform="translate(2.842 2.486)" fill="url(#linear-gradient-3)"/>
+      <rect id="Rectangle_218" data-name="Rectangle 218" width="29.842" height="3.581" transform="translate(0 70.427)" fill="#5b8dc9"/>
+      <path id="Path_1185" data-name="Path 1185" d="M43.711,63.414c0,.239,1.791.167-16.711.167V60H43.711Z" transform="translate(2.842 10.427)" fill="#5b8dc9"/>
+      <path id="Path_1186" data-name="Path 1186" d="M35.356,5,27,21.711H43.711Z" transform="translate(2.842 -0.225)" fill="url(#linear-gradient-3)"/>
+      <path id="Path_1187" data-name="Path 1187" d="M12.387,1H36.261a2.387,2.387,0,0,1,2.387,2.387V5.775H10V3.387A2.387,2.387,0,0,1,12.387,1Z" transform="translate(-0.451 -1)" fill="url(#linear-gradient-5)"/>
+      <circle id="Ellipse_163" data-name="Ellipse 163" cx="3.581" cy="3.581" r="3.581" transform="translate(15.518 9.549)" fill="url(#linear-gradient-6)"/>
+      <path id="Path_1188" data-name="Path 1188" d="M2,47.083c13.13,0,14.324,10.743,29.842,10.743V49.471C16.324,49.471,15.13,28.08,2,28.08Z" transform="translate(-2 4.245)" fill="url(#linear-gradient-6)"/>
+      <path id="Path_1189" data-name="Path 1189" d="M43.043,54.356H27V46H42.577" transform="translate(2.842 7.715)" fill="url(#linear-gradient-6)"/>
+      <path id="Path_1190" data-name="Path 1190" d="M60.677,69.972h-15.9A3.581,3.581,0,0,1,41.2,66.594L39,27H66.454l-2.2,39.594a3.581,3.581,0,0,1-3.581,3.378Z" transform="translate(5.166 4.035)" fill="url(#linear-gradient-9)"/>
+      <path id="Path_1191" data-name="Path 1191" d="M63.914,60a3.581,3.581,0,0,1-3.581,3.581H44.421A3.581,3.581,0,0,1,40.84,60a4.023,4.023,0,0,0,2.9,1.194C62.517,61.194,62.374,61.6,63.914,60Z" transform="translate(5.522 10.427)" fill="#77cacb"/>
+      <path id="Path_1192" data-name="Path 1192" d="M62.834,38,61.568,60.811a2.387,2.387,0,0,1-2.387,2.256H45.263a2.387,2.387,0,0,1-2.387-2.256L41.61,38Z" transform="translate(5.671 6.166)" fill="url(#linear-gradient-6)"/>
+      <path id="Path_1193" data-name="Path 1193" d="M62.834,38,61.568,60.811a2.387,2.387,0,0,1-2.387,2.256H45.263a2.387,2.387,0,0,1-2.387-2.256L41.61,38Z" transform="translate(5.671 6.166)" fill="url(#linear-gradient-6)"/>
+      <path id="Path_1194" data-name="Path 1194" d="M61.433,56.271l-.06,1a2.387,2.387,0,0,1-2.387,2.256H45.068a2.387,2.387,0,0,1-2.387-2.256c-.131-2.184-.286-.131,1.91-.131C60.789,57.142,60.395,57.44,61.433,56.271Z" transform="translate(5.866 9.704)" fill="#c7cdd8"/>
+    </g>
+  </g>
+</svg>

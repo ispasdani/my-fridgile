@@ -1,0 +1,12 @@
+.cat-search {
+  background-color: #dbeddd;
+  border: #dbeddd solid 2px;
+  width: 525px;
+  font-family: "General Sans", sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 10px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}

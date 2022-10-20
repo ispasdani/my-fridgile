@@ -1,0 +1,32 @@
+.card-category {
+  width: 170px;
+  height: 130px;
+  background-color: #dbeddd;
+  border: solid #dbeddd 3px;
+  border-radius: 10px;
+}
+
+.card-category p {
+  font-family: "General Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.category-icon {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.category-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.category-title {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+}

@@ -4,6 +4,7 @@ import "@tensorflow/tfjs-backend-webgl";
 import * as mobilenet from "@tensorflow-models/mobilenet";
 import cameraIcon from "../../assets/icons/camera.svg";
 import imageLabel from "../../assets/icons/cameraLabel.svg";
+import { SaveDetectedItem } from "../saveDetectedItem/SaveDetectedItem";
 
 export const ObjectDetector = () => {
   const [isModelling, setIsModelLoading] = useState(false);
@@ -57,7 +58,10 @@ export const ObjectDetector = () => {
         receive accurate results.
       </p>
 
-      {results.length > 0 && <div>{results[0].className}</div>}
+      {/* {results.length > 0 && <div>{results[0].className}</div>} */}
+      {results.length > 0 && (
+        <SaveDetectedItem itemName={results[0].className} />
+      )}
       <div className="imageContainer">
         {imageURL ? (
           <img
