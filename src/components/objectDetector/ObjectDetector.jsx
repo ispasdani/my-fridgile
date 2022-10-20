@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import Styles from "./objectDetector.css";
+import "./objectDetector.css";
 import "@tensorflow/tfjs-backend-webgl";
 import * as mobilenet from "@tensorflow-models/mobilenet";
 
@@ -10,7 +10,6 @@ export const ObjectDetector = () => {
   const [results, setResults] = useState("");
 
   const imageRef = useRef();
-  const fileInputRef = useRef();
 
   const loadModel = async () => {
     setIsModelLoading(true);
@@ -48,31 +47,38 @@ export const ObjectDetector = () => {
   }
 
   return (
-    <div className={Styles.ObjectDetectorContainer}>
+    <div>
       <h2>Image Identifications</h2>
-      <div className={Styles.InputHolder}>
+      <div>
         <input
           type="file"
           accept="image/*"
           capture="camera"
-          className={Styles.UploadInput}
           onChange={uploadImage}
         />
-        <button className={Styles.AddItemButton}>Add Item</button>
+        <button>Add Item</button>
       </div>
+
       <div>
+        {results && (
+          <div>
+            {" "}
+            {results.map((result) => {
+              console.log(result.className);
+            })}
+          </div>
+        )}
         {imageURL && (
           <img
+            className="image"
             src={imageURL}
             alt="Uploaded Image"
             crossOrigin="anonymous"
             ref={imageRef}
           />
         )}
-
         {imageURL && (
           <button
-            className={Styles.IdentifyingStartButton}
             onClick={() => {
               identify();
             }}
