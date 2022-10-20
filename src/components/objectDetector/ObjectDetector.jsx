@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import "./objectDetector.css";
 import "@tensorflow/tfjs-backend-webgl";
 import * as mobilenet from "@tensorflow-models/mobilenet";
+import cameraIcon from "../../assets/icons/camera.svg";
+import imageLabel from "../../assets/icons/cameraLabel.svg";
 
 export const ObjectDetector = () => {
   const [isModelling, setIsModelLoading] = useState(false);
@@ -47,20 +49,17 @@ export const ObjectDetector = () => {
   }
 
   return (
-    <div>
-      <h2>Image Identifications</h2>
-      <div>
-        <input
-          type="file"
-          accept="image/*"
-          capture="camera"
-          onChange={uploadImage}
-        />
-        <button>Add Item</button>
-      </div>
+    <div className="objectDetector">
+      <h2 className="title">Add Food</h2>
+      <p className="detectorPrimaryMessage">Take a photo of your item.</p>
+      <p className="detectorSecondaryMessage">
+        ! Make sure that the item is centered and keep the device steady to
+        receive accurate results.
+      </p>
 
-      <div>
-        {imageURL && (
+      {results.length > 0 && <div>{results[0].className}</div>}
+      <div className="imageContainer">
+        {imageURL ? (
           <img
             className="image"
             src={imageURL}
@@ -68,19 +67,31 @@ export const ObjectDetector = () => {
             crossOrigin="anonymous"
             ref={imageRef}
           />
+        ) : (
+          <img src={imageLabel} className="imageLabel" />
         )}
-        {imageURL && (
-          <button
-            onClick={() => {
-              identify();
-            }}
-          >
-            Identify Image
-          </button>
-        )}
-
-        {results.length > 0 && <div>{results[0].className}</div>}
       </div>
+
+      {imageURL ? (
+        <button
+          className="identifyItem"
+          onClick={() => {
+            identify();
+          }}
+        >
+          Identify Image
+        </button>
+      ) : (
+        <label className="takeAPhoto">
+          <input
+            type="file"
+            accept="image/*"
+            capture="camera"
+            onChange={uploadImage}
+          />
+          <img src={cameraIcon} alt="" className="cameraIcon" />
+        </label>
+      )}
     </div>
   );
 };

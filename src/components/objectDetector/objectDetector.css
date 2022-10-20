@@ -1,5 +1,59 @@
+.objectDetector {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
 .image {
-  border: 10px solid black;
+  border-radius: 20px;
   width: 300px;
-  height: 500px;
+  height: 380px;
+}
+
+.detectorPrimaryMessage {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.detectorSecondaryMessage {
+  font-size: 14px;
+  color: grey;
+  text-align: center;
+  margin: 10px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.takeAPhoto {
+  margin: 10px;
+}
+
+.identifyItem {
+  margin: 10px;
+  background-color: tomato;
+  border-radius: 6px;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+
+.imageContainer {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 300px;
+  height: 380px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageLabel {
+  width: 200px;
 }

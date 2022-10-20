@@ -1,0 +1,18 @@
+.preferencesBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 6vh;
+}
+
+.preferencesBar h2 {
+  font-size: 18px;
+  margin: 0px 10px;
+}
+
+.preferencesIcon {
+  width: 25px;
+  height: 25px;
+  margin: 0px 10px;
+}
