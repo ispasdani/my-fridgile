@@ -1,0 +1,55 @@
+.NavbarDesktop {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: 0px -1px 5px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px -1px 5px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px -1px 5px rgba(50, 50, 50, 0.75);
+}
+
+.NavBtnContainerDesktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.NavBtnContainerDesktop p {
+  margin: 5px 0px;
+  padding: 0;
+  font-size: 14px;
+}
+
+.NavBtnContainerShoppingListDesktop p {
+  margin: 0;
+}
+
+.NavBtnsDesktop {
+  width: 22px;
+  height: 22px;
+}
+
+.NavBtnMiddleDesktop {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: -1.6rem;
+  transition: 0.5s all ease-in-out;
+}
+
+.NavBtnMiddleDesktop:hover {
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 570px) {
+  .NavbarDesktop {
+    display: none;
+  }
+}
