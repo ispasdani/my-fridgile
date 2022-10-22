@@ -4,6 +4,7 @@ import PageTemplate from "./templates/PageTemplate";
 import SaveingProvider from "./components/contexts/savingContextx";
 import { Myfridge } from "./pages/MyFridge/MyFridge";
 import { CardContent } from "./components/cardContent/CardContent";
+import { ShoppingList } from "./pages/shoppingList/ShoppingList";
 
 function App() {
   return (
@@ -14,6 +15,10 @@ function App() {
             <Routes>
               <Route path="/my-fridgile/" element={<Myfridge />} />
               <Route path="/my-fridgile/add" element={<ObjectDetector />} />
+              <Route
+                path="/my-fridgile/shoppingList"
+                element={<ShoppingList />}
+              />
               <Route
                 path="/my-fridgile/cardContent"
                 element={<CardContent />}
