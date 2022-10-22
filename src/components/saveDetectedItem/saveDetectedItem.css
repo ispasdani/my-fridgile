@@ -1,0 +1,10 @@
+.saveDetectedItem {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+  z-index: 1;
+  width: 300px;
+  height: 400px;
+}

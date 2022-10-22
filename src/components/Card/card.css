@@ -1,32 +1,28 @@
 .card-category {
-  width: 170px;
+  width: 150px;
   height: 130px;
   background-color: #dbeddd;
-  border: solid #dbeddd 3px;
   border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+}
+
+.card-category:hover {
+  transform: scale(1.1);
 }
 
 .card-category p {
   font-family: "General Sans", sans-serif;
   font-weight: 400;
   font-size: 15px;
-}
-
-.category-icon {
-  height: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 25px;
+  margin: 10px;
 }
 
 .category-icon img {
-  width: 100%;
-  height: 100%;
-}
-
-.category-title {
-  height: 40%;
-  display: flex;
-  justify-content: center;
+  height: 40px;
 }

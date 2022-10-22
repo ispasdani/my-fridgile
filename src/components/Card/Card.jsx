@@ -1,9 +1,15 @@
-import React from "react";
-import "./Card.css";
+import "./card.css";
+import { useNavigate } from "react-router-dom";
 
-export default function Card({ icon, title }) {
+export function Card({ icon, title }) {
+  const navigate = useNavigate();
+
+  const navigateToCardContent = () => {
+    navigate(`/my-fridgile/cardContent?name=${title}`);
+  };
+
   return (
-    <div className="card-category">
+    <div className="card-category" onClick={navigateToCardContent}>
       <div className="category-icon">
         <img src={icon} alt="category icon"></img>
       </div>

@@ -1,36 +1,77 @@
-.grid-container {
-  display: grid;
-  width: 40%;
-  grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 15px;
-  column-gap: 15px;
+.myFridge {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.left-side {
-  width: 50vw;
-  height: 100vh;
-  float: left;
-  margin-left: 5%;
+.fridgeLeftSide {
+  width: 50%;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
 }
-.right-side {
-  width: 40vw;
-  height: 100vh;
-  float: right;
-  margin-right: 5%;
+
+.fridgeTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.headline p {
+.fridgeTitle p {
   font-family: "Clash Display", sans-serif;
   font-weight: 500;
-  font-size: 80px;
-  float: left;
-  margin-bottom: 30px;
+  font-size: 50px;
+  margin: 30px 20px 0px 20px;
 }
 
-.body-text p {
-  font-family: "General Sans", sans-serif;
-  float: left;
-  font-size: 16px;
+.fridgeSubTitle {
+  font-family: "Clash Display", sans-serif;
+  font-weight: 500;
+  margin: 10px 20px;
+}
+
+.fridgeCategories {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.fridgeRightSide {
+  width: 50%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 760px) {
+  .myFridge {
+    flex-direction: column;
+  }
+
+  .fridgeLeftSide {
+    width: 100%;
+  }
+
+  .fridgeRightSide {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .fridgeCategories {
+    justify-content: center;
+  }
+
+  .fridgeLeftSide {
+    min-height: 70vh;
+  }
 }

@@ -1,0 +1,57 @@
+.recipesWidget {
+  width: 90%;
+  min-height: 36vh;
+  background-color: #f2e2ff;
+  border-radius: 30px;
+  font-family: "Clash Display", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.recipesWidgetLeft {
+  width: 60%;
+  height: 100%;
+}
+
+.recipesWidgetTitle p {
+  margin: 20px;
+  font-size: 35px;
+}
+
+.recipesWidgetMessage {
+  margin: 0px 20px 0px 20px;
+}
+
+.recipesBtn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.recipesBtn a {
+  background-color: black;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px 30px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+}
+
+.recipesBtn a:hover {
+  transform: scale(1.1);
+}
+
+.recipesWidgetRight {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.recipesWidgetIcon {
+  height: 200px;
+  margin: 0;
+}
