@@ -1,9 +1,11 @@
 .myFridge {
-  width: 100%;
+
   min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .fridgeLeftSide {
@@ -11,12 +13,14 @@
   min-height: 90vh;
   display: flex;
   flex-direction: column;
+
 }
 
 .fridgeTitle {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  
 }
 
 .fridgeTitle p {
@@ -73,5 +77,8 @@
 
   .fridgeLeftSide {
     min-height: 70vh;
+  }
+  .fridgeRightSide {
+    display: none;
   }
 }

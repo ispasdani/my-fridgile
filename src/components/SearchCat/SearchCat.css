@@ -1,0 +1,16 @@
+@import url('http://fonts.cdnfonts.com/css/general-sans');
+
+
+#search-input {
+margin-left: 3%;
+    padding-left: 3% ;
+    padding-right: 3%;
+    width: 65% ;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: 1px solid #DBEDDD;
+    border-radius: 10px;
+    background-color: #DBEDDD;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
