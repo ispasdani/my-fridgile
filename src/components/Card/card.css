@@ -10,7 +10,6 @@
   flex-direction: column;
   cursor: pointer;
   transition: 0.5s all ease-in-out;
-  border: solid #DBEDDD 3px;
 }
 
 .card-category:hover {

@@ -11,8 +11,6 @@ import "./myFridge.css";
 import { v4 as uuidv4 } from "uuid";
 import { RecipesWidget } from "../../components/RecipesWidget/RecipesWidget.jsx";
 import { DownloadWidget } from "../../components/DownloadWidget/DownloadWidget.jsx";
-import PlusCard from "../../components/PlusCard/PlusCard.jsx";
-import { SearchCat } from "../../components/SearchCat/SearchCat";
 
 export function Myfridge() {
   return (
@@ -21,12 +19,10 @@ export function Myfridge() {
         <div className="fridgeTitle">
           <p>My Fridge</p>
         </div>
-        <SearchCat />
         <div className="fridgeSubTitle">
           <p>Click on the category to see and add items</p>
         </div>
         <div className="fridgeCategories">
-        <PlusCard icon={Plus} />
           <Card icon={Carrot} title={"Vegetables"} />
           <Card icon={Banana} title={"Fruits"} />
           <Card icon={Dairy} title={"Dairy"} />
