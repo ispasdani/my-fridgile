@@ -18,7 +18,13 @@ const SaveingProvider = ({ children }) => {
   }
 
   return (
-    <SaveingContext.Provider value={{ detectedItem, addDetectedItem }}>
+    <SaveingContext.Provider
+      value={{
+        detectedItem,
+        setDetectedItem,
+        addDetectedItem,
+      }}
+    >
       {children}
     </SaveingContext.Provider>
   );

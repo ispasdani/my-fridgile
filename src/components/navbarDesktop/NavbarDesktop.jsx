@@ -53,9 +53,11 @@ export const NavbarDesktop = () => {
       </div>
       <div className="NavBtnContainerDesktop NavBtnContainerMiddleDesktop">
         <p>Add Food</p>
-        <Link to="/my-fridgile/add">
-          <img src={addIcon} alt="" className="NavBtns NavBtnMiddleDesktop" />
-        </Link>
+        <div className="NavBtns NavBtnMiddleDesktop">
+          <Link to="/my-fridgile/add">
+            <img src={addIcon} alt="" />
+          </Link>
+        </div>
       </div>
       <div
         className="NavBtnContainerDesktop"

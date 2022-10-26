@@ -1,4 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import "./itemInList.css";
+import checkIconBlack from "../../assets/icons/checkBlack.svg";
+import editIconBlack from "../../assets/icons/editBlack.svg";
+import trashIconBlack from "../../assets/icons/trashIconBlack.svg";
+import checkCircleIconBlack from "../../assets/icons/circleCheckIconBlack.svg";
+import plusIconBlack from "../../assets/icons/plusIconBlackk.svg";
 
 export const ItemInListComponent = ({
   toDo,
@@ -11,20 +17,26 @@ export const ItemInListComponent = ({
       {toDo &&
         toDo
           .sort((a, b) => (a.id > b.id ? 1 : -1))
-          .map((task, index) => {
+          .map((task) => {
             return (
               <React.Fragment key={task.id}>
-                <div>
-                  <div className={task.status ? "done" : ""}>
-                    <span>{index + 1}</span>
-                    <span>{task.title}</span>
-                  </div>
+                <div className="itemToBuyContainer">
                   <div>
+                    <img src={plusIconBlack} className="itemInListIconsMain" />
+                  </div>
+                  <div className={task.status ? "done" : "notDone"}>
+                    <span className="itemName">{task.title}</span>
+                  </div>
+                  <div className="iconsContainer">
                     <span
                       title="Completed / Not Completed"
                       onClick={(e) => markDone(task.id)}
                     >
-                      check
+                      <img
+                        src={checkIconBlack}
+                        alt=""
+                        className="itemInListIcons"
+                      />
                     </span>
 
                     {task.status ? null : (
@@ -38,12 +50,20 @@ export const ItemInListComponent = ({
                           })
                         }
                       >
-                        edit
+                        <img
+                          src={editIconBlack}
+                          alt=""
+                          className="itemInListIcons"
+                        />
                       </span>
                     )}
 
                     <span title="Delete" onClick={() => deleteTask(task.id)}>
-                      delete
+                      <img
+                        src={trashIconBlack}
+                        alt=""
+                        className="itemInListIcons"
+                      />
                     </span>
                   </div>
                 </div>

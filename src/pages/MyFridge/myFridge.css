@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .fridgeLeftSide {
@@ -50,6 +51,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.addCardCategory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 130px;
+  border: solid #dbeddd 3px;
+  border-radius: 5%;
+  margin: 10px;
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+}
+
+.addCardCategory:hover {
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 760px) {

@@ -39,12 +39,14 @@ export const NavbarMobile = () => {
               setFridgeOnHover(false);
             }}
           >
-            {fridgeOnHover ? (
-              <img src={fridgeIconOrange} className="NavBtnsMobile" />
-            ) : (
-              <img src={fridgeIcon} className="NavBtnsMobile" />
-            )}
-            <p>My Fridge</p>
+            <Link to="/my-fridgile/">
+              {fridgeOnHover ? (
+                <img src={fridgeIconOrange} className="NavBtnsMobile" />
+              ) : (
+                <img src={fridgeIcon} className="NavBtnsMobile" />
+              )}
+              <p>My Fridge</p>
+            </Link>
           </div>
           <div
             className="NavBtnContainerMobile NavBtnContainerMobileShoppingList"
@@ -55,12 +57,14 @@ export const NavbarMobile = () => {
               setShoppingListOnHover(false);
             }}
           >
-            {shoppingListOnHover ? (
-              <img src={shoppingListIconOrange} className="NavBtnsMobile" />
-            ) : (
-              <img src={shoppingListIcon} className="NavBtnsMobile" />
-            )}
-            <p>Shopping List</p>
+            <Link to="/my-fridgile/shoppingList">
+              {shoppingListOnHover ? (
+                <img src={shoppingListIconOrange} className="NavBtnsMobile" />
+              ) : (
+                <img src={shoppingListIcon} className="NavBtnsMobile" />
+              )}
+              <p>Shopping List</p>
+            </Link>
           </div>
           <div className="NavBtnContainerMobile ">
             <Link to="/my-fridgile/add">
@@ -97,12 +101,14 @@ export const NavbarMobile = () => {
               setProfileOnHover(false);
             }}
           >
-            {profileOnHover ? (
-              <img src={profileIconOrange} alt="" className="NavBtnsMobile" />
-            ) : (
-              <img src={profileIcon} alt="" className="NavBtnsMobile" />
-            )}
-            <p>My profile</p>
+            <Link to="/my-fridgile/myProfile">
+              {profileOnHover ? (
+                <img src={profileIconOrange} alt="" className="NavBtnsMobile" />
+              ) : (
+                <img src={profileIcon} alt="" className="NavBtnsMobile" />
+              )}
+              <p>My profile</p>
+            </Link>
           </div>
         </div>
       ) : (

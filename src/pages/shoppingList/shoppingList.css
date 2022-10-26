@@ -1,0 +1,48 @@
+.shoppingList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.shoppingListTitle {
+  width: 90%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.shoppingListTitle h2 {
+  font-family: "General Sans", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.shoppingListContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.shoppingListInstructions {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-family: "General Sans", sans-serif;
+}
+
+.shoppingListInstructions p:nth-child(2) {
+  color: #e57b07;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.shoppingListInstructions p:nth-child(2):hover {
+  transform: scale(1.1);
+}

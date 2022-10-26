@@ -5,6 +5,7 @@ import SaveingProvider from "./components/contexts/savingContextx";
 import { Myfridge } from "./pages/MyFridge/MyFridge";
 import { CardContent } from "./components/cardContent/CardContent";
 import { ShoppingList } from "./pages/shoppingList/ShoppingList";
+import { MyProfile } from "./pages/MyProfile/MyProfile";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
                 path="/my-fridgile/cardContent"
                 element={<CardContent />}
               />
+              <Route path="/my-fridgile/myProfile" element={<MyProfile />} />
             </Routes>
           </SaveingProvider>
         </PageTemplate>

@@ -1,12 +1,12 @@
 import "./shoppingList.css";
 import { useState } from "react";
-import { AddItemToListComponent } from "../../components/AddTask/AddItemInListComponent";
+import { AddItemToListComponent } from "../../components/AddItemToList/AddItemInListComponent";
 import { ItemInListComponent } from "../../components/TodoComponent/ItemInListComponent";
 import { UpdateComponent } from "../../components/UpdateComponent/UpdateComponent";
+import shoppingListBackground from "../../assets/images/shoppingBackground.svg";
 
 export const ShoppingList = () => {
   const [toDo, setToDo] = useState([]);
-
   const [newTask, setNewTask] = useState("");
   const [updateData, setUpdateData] = useState("");
 
@@ -56,37 +56,49 @@ export const ShoppingList = () => {
 
   return (
     <div className="shoppingList">
-      <br />
-      <br />
-      <h2>To Do List App (ReactJS)</h2>
-      <br />
-      <br />
+      <div className="shoppingListTitle">
+        <h2>Shopping List</h2>
+      </div>
+      <div className="shoppingListContent">
+        {updateData && updateData ? (
+          <UpdateComponent
+            updateData={updateData}
+            changeTask={changeTask}
+            updateTask={updateTask}
+            cancelUpdate={cancelUpdate}
+          />
+        ) : (
+          <AddItemToListComponent
+            newTask={newTask}
+            setNewTask={setNewTask}
+            addTask={addTask}
+          />
+        )}
 
-      {updateData && updateData ? (
-        <UpdateComponent
-          updateData={updateData}
-          changeTask={changeTask}
-          updateTask={updateTask}
-          cancelUpdate={cancelUpdate}
-        />
-      ) : (
-        <AddItemToListComponent
-          newTask={newTask}
-          setNewTask={setNewTask}
-          addTask={addTask}
-        />
-      )}
+        {toDo.length > 0 && (
+          <div className="shoppingListInstructions">
+            <p>Click on + to add items to fridge</p>
+            <p>Add all</p>
+          </div>
+        )}
 
-      {/* Display ToDos */}
-
-      {toDo && toDo.length ? "" : "No Tasks..."}
-
-      <ItemInListComponent
-        toDo={toDo}
-        markDone={markDone}
-        setUpdateData={setUpdateData}
-        deleteTask={deleteTask}
-      />
+        <div className="shoppinglistItemsContainer">
+          {toDo.length > 0 ? (
+            <ItemInListComponent
+              toDo={toDo}
+              markDone={markDone}
+              setUpdateData={setUpdateData}
+              deleteTask={deleteTask}
+            />
+          ) : (
+            <img
+              src={shoppingListBackground}
+              alt=""
+              className="shoppingListImgBackground"
+            />
+          )}
+        </div>
+      </div>
     </div>
   );
 };

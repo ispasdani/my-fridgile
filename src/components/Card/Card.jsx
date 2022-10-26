@@ -11,9 +11,8 @@ export function Card({ icon, title }) {
   return (
     <div className="card-category" onClick={navigateToCardContent}>
       <div className="category-icon">
-        <img src={icon} alt="category icon"></img>
+        {icon && <img src={icon} alt="category icon" />}
       </div>
-
       <div className="category-title">
         <p>{title}</p>
       </div>

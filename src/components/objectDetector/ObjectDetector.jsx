@@ -5,13 +5,13 @@ import * as mobilenet from "@tensorflow-models/mobilenet";
 import cameraIcon from "../../assets/icons/camera.svg";
 import imageLabel from "../../assets/icons/cameraLabel.svg";
 import { SaveDetectedItem } from "../saveDetectedItem/SaveDetectedItem";
+import { LoadingComponent } from "../loadingComponent/LoadingComponent";
 
 export const ObjectDetector = () => {
   const [isModelling, setIsModelLoading] = useState(false);
   const [model, setModel] = useState(null);
   const [imageURL, setImageURL] = useState(null);
   const [results, setResults] = useState([]);
-
   const imageRef = useRef();
 
   const loadModel = async () => {
@@ -46,7 +46,7 @@ export const ObjectDetector = () => {
   }, []);
 
   if (isModelling) {
-    return <h2>Model loading...</h2>;
+    return <LoadingComponent />;
   }
 
   return (

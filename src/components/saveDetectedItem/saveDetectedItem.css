@@ -1,10 +1,79 @@
 .saveDetectedItem {
   position: absolute;
-  top: 10vh;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: red;
+  top: -10vh;
+  left: 0;
   z-index: 1;
-  width: 300px;
-  height: 400px;
+  width: 100%;
+  height: 120%;
+  background: rgba(105, 105, 105, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.saveDetectedItemPopup {
+  border-radius: 20px;
+  background-color: #fafafa;
+  border: 3px #dbeddd solid;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 10px;
+  z-index: 200;
+}
+
+.saveDetectedItemPopup form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "General Sans", sans-serif;
+}
+
+.saveDetectedItemBtns button:nth-child(1) {
+  margin: 10px 15px;
+  border: none;
+  background-color: #2c2c2c;
+  color: #fafafa;
+  height: 39px;
+  width: 60px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.saveDetectedItemBtns button:nth-child(1):hover {
+  transform: scale(1.1);
+}
+
+.saveDetectedItemBtns button:nth-child(2) {
+  margin: 10px 15px;
+  border: none;
+  background-color: #2c2c2c;
+  color: #fafafa;
+  height: 39px;
+  width: 60px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.saveDetectedItemBtns button:nth-child(2):hover {
+  transform: scale(1.1);
+}
+
+.saveDetectedItemPopup form input {
+  margin: 0px 15px;
+  width: 70%;
+  padding: 8px 5px;
+  background-color: transparent;
+  border: 3px solid #dbeddd;
+  color: #2c2c2c;
+  outline: none;
+  border-radius: 5px;
 }

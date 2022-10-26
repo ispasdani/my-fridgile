@@ -8,10 +8,15 @@
   position: relative;
 }
 
+.title {
+  margin: 35px 0px 0px 0px;
+}
+
 .image {
   border-radius: 20px;
   width: 300px;
   height: 380px;
+  object-fit: cover;
 }
 
 .detectorPrimaryMessage {
@@ -48,13 +53,23 @@ input[type="file"] {
   border: 2px solid black;
   border-radius: 20px;
   width: 300px;
-  height: 380px;
+  height: 350px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px 0px;
 }
 
 .imageLabel {
   width: 200px;
+}
+
+@media only screen and (max-width: 569px) {
+  .title {
+    margin: 10px;
+  }
+  .imageContainer {
+    margin-top: 20px;
+  }
 }
