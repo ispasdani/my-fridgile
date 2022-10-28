@@ -1,6 +1,11 @@
 import "./addItemToList.css";
 
-export const AddItemToListComponent = ({ newTask, setNewTask, addTask }) => {
+export const AddItemToListComponent = ({
+  newTask,
+  setNewTask,
+  addTask,
+  itemRef,
+}) => {
   return (
     <>
       <div className="addItemToListContainer">
@@ -8,6 +13,7 @@ export const AddItemToListComponent = ({ newTask, setNewTask, addTask }) => {
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
           placeholder="Add an item..."
+          ref={itemRef}
         />
         <button onClick={addTask}>Add</button>
       </div>

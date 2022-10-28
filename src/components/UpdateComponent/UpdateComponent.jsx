@@ -10,7 +10,7 @@ export const UpdateComponent = ({
     <>
       <div className="updateItemContainer">
         <input
-          value={updateData && updateData.title}
+          value={updateData && updateData.item}
           onChange={(e) => changeTask(e)}
         />
         <div className="updateBtns">

@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./itemInList.css";
 import checkIconBlack from "../../assets/icons/checkBlack.svg";
+import checkIconOrange from "../../assets/icons/checkOrange.svg";
 import editIconBlack from "../../assets/icons/editBlack.svg";
+import editIconOrange from "../../assets/icons/editIconOrange.svg";
 import trashIconBlack from "../../assets/icons/trashIconBlack.svg";
-import checkCircleIconBlack from "../../assets/icons/circleCheckIconBlack.svg";
+import trashIconOrange from "../../assets/icons/trashOrange.svg";
+//attention
+import checkCircleIconBlack from "../../assets/icons/circleCheckIconBlack.svg"; //soon
+//attention
 import plusIconBlack from "../../assets/icons/plusIconBlackk.svg";
 
 export const ItemInListComponent = ({
@@ -12,64 +17,68 @@ export const ItemInListComponent = ({
   setUpdateData,
   deleteTask,
 }) => {
+  const [onHoverCheck, setOnHoverCheck] = useState(false);
+  const [onHoverEdit, setOnHoverEdit] = useState(false);
+  const [onHoverTrash, setOnHoverTrash] = useState(false);
+
   return (
-    <>
-      {toDo &&
-        toDo
-          .sort((a, b) => (a.id > b.id ? 1 : -1))
-          .map((task) => {
-            return (
-              <React.Fragment key={task.id}>
-                <div className="itemToBuyContainer">
-                  <div>
-                    <img src={plusIconBlack} className="itemInListIconsMain" />
-                  </div>
-                  <div className={task.status ? "done" : "notDone"}>
-                    <span className="itemName">{task.title}</span>
-                  </div>
-                  <div className="iconsContainer">
-                    <span
-                      title="Completed / Not Completed"
-                      onClick={(e) => markDone(task.id)}
-                    >
-                      <img
-                        src={checkIconBlack}
-                        alt=""
-                        className="itemInListIcons"
-                      />
-                    </span>
+    <div className="itemListContainer" key={toDo.id}>
+      <div className="itemToBuyContainer">
+        <div>
+          <img src={plusIconBlack} className="itemInListIconsMain" />
+        </div>
+        <div className={toDo.status ? "done" : "notDone"}>
+          <span className="itemName">{toDo.item}</span>
+        </div>
+        <div className="iconsContainer">
+          <span
+            title="Completed / Not Completed"
+            onClick={(e) => markDone(toDo.id)}
+            onMouseEnter={() => setOnHoverCheck(true)}
+            onMouseLeave={() => setOnHoverCheck(false)}
+          >
+            {onHoverCheck ? (
+              <img src={checkIconOrange} alt="" className="itemInListIcons" />
+            ) : (
+              <img src={checkIconBlack} alt="" className="itemInListIcons" />
+            )}
+          </span>
 
-                    {task.status ? null : (
-                      <span
-                        title="Edit"
-                        onClick={() =>
-                          setUpdateData({
-                            id: task.id,
-                            title: task.title,
-                            status: task.status ? true : false,
-                          })
-                        }
-                      >
-                        <img
-                          src={editIconBlack}
-                          alt=""
-                          className="itemInListIcons"
-                        />
-                      </span>
-                    )}
+          {toDo.status ? null : (
+            <span
+              title="Edit"
+              onClick={() =>
+                setUpdateData({
+                  id: toDo.id,
+                  title: toDo.title,
+                  status: toDo.status ? true : false,
+                })
+              }
+              onMouseEnter={() => setOnHoverEdit(true)}
+              onMouseLeave={() => setOnHoverEdit(false)}
+            >
+              {onHoverEdit ? (
+                <img src={editIconOrange} alt="" className="itemInListIcons" />
+              ) : (
+                <img src={editIconBlack} alt="" className="itemInListIcons" />
+              )}
+            </span>
+          )}
 
-                    <span title="Delete" onClick={() => deleteTask(task.id)}>
-                      <img
-                        src={trashIconBlack}
-                        alt=""
-                        className="itemInListIcons"
-                      />
-                    </span>
-                  </div>
-                </div>
-              </React.Fragment>
-            );
-          })}
-    </>
+          <span
+            title="Delete"
+            onClick={() => deleteTask(toDo.id)}
+            onMouseEnter={() => setOnHoverTrash(true)}
+            onMouseLeave={() => setOnHoverTrash(false)}
+          >
+            {onHoverTrash ? (
+              <img src={trashIconOrange} alt="" className="itemInListIcons" />
+            ) : (
+              <img src={trashIconBlack} alt="" className="itemInListIcons" />
+            )}
+          </span>
+        </div>
+      </div>
+    </div>
   );
 };

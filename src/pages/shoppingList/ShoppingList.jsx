@@ -1,37 +1,46 @@
 import "./shoppingList.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { AddItemToListComponent } from "../../components/AddItemToList/AddItemInListComponent";
 import { ItemInListComponent } from "../../components/TodoComponent/ItemInListComponent";
 import { UpdateComponent } from "../../components/UpdateComponent/UpdateComponent";
 import shoppingListBackground from "../../assets/images/shoppingBackground.svg";
+import { useSaveings } from "../../components/contexts/savingContextx";
 
 export const ShoppingList = () => {
   const [toDo, setToDo] = useState([]);
   const [newTask, setNewTask] = useState("");
   const [updateData, setUpdateData] = useState("");
 
+  const {
+    saveItemToLocal,
+    saveItemFromShoppingList,
+    setSaveItemFromShoppingList,
+  } = useSaveings();
+  const itemRef = useRef();
+
   const addTask = () => {
     if (newTask) {
       let num = toDo.length + 1;
       let newEntry = { id: num, title: newTask, status: false };
       setToDo([...toDo, newEntry]);
+      saveItemToLocal({ item: itemRef.current.value });
       setNewTask("");
     }
   };
 
   const deleteTask = (id) => {
-    let newTasks = toDo.filter((task) => task.id !== id);
-    setToDo(newTasks);
+    let newTasks = saveItemFromShoppingList.filter((task) => task.id !== id);
+    setSaveItemFromShoppingList(newTasks);
   };
 
   const markDone = (id) => {
-    let newTask = toDo.map((task) => {
+    let newTask = saveItemFromShoppingList.map((task) => {
       if (task.id === id) {
         return { ...task, status: !task.status };
       }
       return task;
     });
-    setToDo(newTask);
+    setSaveItemFromShoppingList(newTask);
   };
 
   const cancelUpdate = () => {
@@ -41,16 +50,18 @@ export const ShoppingList = () => {
   const changeTask = (e) => {
     let newEntry = {
       id: updateData.id,
-      title: e.target.value,
+      item: e.target.value,
       status: updateData.status ? true : false,
     };
     setUpdateData(newEntry);
   };
-
+  console.log(updateData);
   const updateTask = () => {
-    let filterRecords = [...toDo].filter((task) => task.id !== updateData.id);
+    let filterRecords = [...saveItemFromShoppingList].filter(
+      (task) => task.id !== updateData.id
+    );
     let updatedObject = [...filterRecords, updateData];
-    setToDo(updatedObject);
+    setSaveItemFromShoppingList(updatedObject);
     setUpdateData("");
   };
 
@@ -72,10 +83,11 @@ export const ShoppingList = () => {
             newTask={newTask}
             setNewTask={setNewTask}
             addTask={addTask}
+            itemRef={itemRef}
           />
         )}
 
-        {toDo.length > 0 && (
+        {saveItemFromShoppingList.length > 0 && (
           <div className="shoppingListInstructions">
             <p>Click on + to add items to fridge</p>
             <p>Add all</p>
@@ -83,13 +95,20 @@ export const ShoppingList = () => {
         )}
 
         <div className="shoppinglistItemsContainer">
-          {toDo.length > 0 ? (
-            <ItemInListComponent
-              toDo={toDo}
-              markDone={markDone}
-              setUpdateData={setUpdateData}
-              deleteTask={deleteTask}
-            />
+          {saveItemFromShoppingList.length > 0 ? (
+            <div className="wrapperList">
+              {saveItemFromShoppingList.map((x) => {
+                return (
+                  <ItemInListComponent
+                    toDo={x}
+                    markDone={markDone}
+                    setUpdateData={setUpdateData}
+                    deleteTask={deleteTask}
+                    key={x.id}
+                  />
+                );
+              })}
+            </div>
           ) : (
             <img
               src={shoppingListBackground}

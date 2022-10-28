@@ -10,10 +10,18 @@ export function useSaveings() {
 
 const SaveingProvider = ({ children }) => {
   const [detectedItem, setDetectedItem] = useLocalStorage("items", []);
+  const [saveItemFromShoppingList, setSaveItemFromShoppingList] =
+    useLocalStorage("sList", []);
 
   function addDetectedItem({ item }) {
     setDetectedItem((prevItems) => {
       return [...prevItems, { id: uuidv4(), item }];
+    });
+  }
+
+  function saveItemToLocal({ item }) {
+    setSaveItemFromShoppingList((prevItems) => {
+      return [...prevItems, { id: uuidv4(), status: false, item }];
     });
   }
 
@@ -23,6 +31,9 @@ const SaveingProvider = ({ children }) => {
         detectedItem,
         setDetectedItem,
         addDetectedItem,
+        saveItemFromShoppingList,
+        setSaveItemFromShoppingList,
+        saveItemToLocal,
       }}
     >
       {children}

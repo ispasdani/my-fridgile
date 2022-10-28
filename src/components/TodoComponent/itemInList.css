@@ -1,3 +1,10 @@
+.itemListContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .itemToBuyContainer {
   width: 90%;
   height: 8vh;
@@ -12,7 +19,7 @@
 
 .notDone {
   padding: 5px 10px;
-  width: 150px;
+  width: 120px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -20,7 +27,7 @@
 
 .done {
   padding: 5px 10px;
-  width: 150px;
+  width: 120px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -28,16 +35,23 @@
 }
 
 .itemInListIcons {
-  width: 25px;
-  height: 25px;
-  margin: 0px 5px;
+  width: 20px;
+  height: 20px;
+  margin: 0px 10px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.itemInListIcons:hover {
+  transform: scale(1.2);
 }
 
 .itemInListIconsMain {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   margin: 0px 10px;
   transition: 0.5s all ease-in-out;
+  cursor: pointer;
 }
 
 .itemInListIconsMain:hover {

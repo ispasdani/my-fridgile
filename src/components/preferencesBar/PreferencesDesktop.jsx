@@ -7,21 +7,20 @@ export const PreferencesBarDesktop = () => {
   const [prefOnHover, setPrefOnHover] = useState(false);
 
   return (
-    <div
-      className="preferencesBar"
-      onMouseEnter={() => {
-        setPrefOnHover(true);
-      }}
-      onMouseLeave={() => {
-        setPrefOnHover(false);
-      }}
-    >
-      <h2>Fridgile</h2>
-      <div>
+    <div className="preferencesBar">
+      <h2 className="titleHeartbeat">Fridgile</h2>
+      <div
+        onMouseEnter={() => {
+          setPrefOnHover(true);
+        }}
+        onMouseLeave={() => {
+          setPrefOnHover(false);
+        }}
+      >
         {prefOnHover ? (
-          <img src={preferencesBlack} alt="" className="preferencesIcon" />
-        ) : (
           <img src={preferencesOrange} alt="" className="preferencesIcon" />
+        ) : (
+          <img src={preferencesBlack} alt="" className="preferencesIcon" />
         )}
       </div>
     </div>

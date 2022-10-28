@@ -1,0 +1,255 @@
+.profileContainer {
+  width: 100%;
+  height: 90vh;
+  font-family: "Clash Display", sans-serif;
+}
+
+.profileTitleContainer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profileTitleContainer p {
+  font-family: "Clash Display", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  margin-left: 5%;
+}
+
+.profileTitleContainer div {
+  margin-right: 5%;
+}
+
+.profileTitleContainer img {
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+}
+
+.profileTitleContainer img:hover {
+  transform: scale(1.1);
+}
+
+.profileImgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 30vh;
+  width: 100%;
+}
+
+.nameUnderImgProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameUnderImgProfile div {
+  margin: 5px;
+}
+
+.profileImgContainer p {
+  margin: 5px 0px;
+}
+
+.profileImgContainer img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.onlineDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: tomato;
+  margin: 0;
+}
+
+.logoutContainer {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoutContainer div p {
+  font-size: 22px;
+  color: #e57b07;
+  margin: 0px 10px;
+  transition: 0.5s all ease-in-out;
+}
+
+.logoutContainer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logoutContainer div img {
+  width: 25px;
+  height: 25px;
+  margin: 0px 5px;
+  transition: 0.5s all ease-in-out;
+}
+
+.logoutContainer div:hover img {
+  transform: translateX(10px) rotate(360deg);
+}
+
+.logoutContainer div:hover p {
+  transform: scale(1.1);
+}
+
+.seeStatsBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seeStatsBtn div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.seeStatsBtn div:hover p {
+  transform: scale(1.1);
+}
+
+.seeStatsBtn div:hover img {
+  transform: translateX(10px) rotate(360deg);
+}
+
+.seeStatsBtn p {
+  margin: 10px;
+  color: #e57b07;
+  transition: 0.5s all ease-in-out;
+}
+
+.seeStatsBtn img {
+  width: 23px;
+  height: 23px;
+  transition: 0.5s all ease-in-out;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.pieContainer {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  margin-top: 10px;
+  margin: 10px 20px;
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+}
+
+.pieContainer:hover {
+  transform: scale(1.1);
+}
+
+.pieBackground {
+  background-color: #dbeddd;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+}
+
+.stat-circle-cover {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  background-color: white;
+  height: 80%;
+  width: 80%;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 0px 5px #666;
+  -webkit-box-shadow: inset 0px 0px 5px #666;
+  box-shadow: inset 0px 0px 1px #666;
+}
+
+.stat-number {
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #e57b07;
+  font-size: 16px;
+}
+
+.stat-number p {
+  margin: 0;
+}
+
+.stat-number p:nth-child(1) {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.stat-number p:nth-child(2) {
+  font-size: 12px;
+}
+
+.stat-number p:nth-child(3) {
+  font-size: 12px;
+}
+
+.pie {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  clip: rect(0px, 50px, 100px, 0px);
+}
+
+.hold {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+
+#pieSlice25 .pie {
+  background-color: #e57b07;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+#pieSlice50 .pie {
+  background-color: #e57b07;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

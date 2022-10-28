@@ -32,13 +32,7 @@ export const SaveDetectedItem = ({ itemName }) => {
           />
           <div className="saveDetectedItemBtns">
             <button type="submit">Yes</button>
-            <button
-              onClick={() => {
-                refreshPage();
-              }}
-            >
-              NO
-            </button>
+            <button>NO</button>
           </div>
         </form>
       </div>

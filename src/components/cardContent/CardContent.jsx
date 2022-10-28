@@ -4,7 +4,7 @@ import { useSaveings } from "../contexts/savingContextx";
 import { CardItem } from "../cardItem/CardItem";
 
 export const CardContent = () => {
-  const { detectedItem, deleteDetectedItem } = useSaveings();
+  const { detectedItem } = useSaveings();
   let query = useQuery();
 
   return (
