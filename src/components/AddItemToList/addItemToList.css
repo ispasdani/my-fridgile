@@ -1,9 +1,9 @@
 .addItemToListContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 90%;
-  height: 20%;
+  height: 5vh;
   background-color: #dbeddd;
   border: 3px solid #dbeddd;
   margin-bottom: 15px;
@@ -12,7 +12,6 @@
 
 .addItemToListContainer input {
   width: 70%;
-  height: 10vh;
   padding: 10px 5px;
   background-color: transparent;
   border: none;
@@ -24,28 +23,17 @@
   border: 3px solid #2c2c2c;
   background-color: #2c2c2c;
   color: #fafafa;
-  height: 39px;
+  height: 100%;
   width: 60px;
-  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   cursor: pointer;
   transition: 0.5s all ease-in-out;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .addItemToListContainer button:hover {
   transform: scale(1.1);
-}
-
-.shoppinglistItemsContainer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
-
-.shoppingListImgBackground {
-  margin-top: 10vh;
-  opacity: 0.7;
 }

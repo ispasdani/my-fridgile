@@ -3,6 +3,7 @@ import "./navbarDesktop.css";
 import fridgeIcon from "../../assets/icons/navIconsBlack/fridgeIcon.svg";
 import shoppingListIcon from "../../assets/icons/navIconsBlack/shoppingListIcon.svg";
 import addIcon from "../../assets/icons/navIconsBlack/addIcon.svg";
+import addIconOrange from "../../assets/icons/navIconsOrange/addIconOrange.svg";
 import recipesIcon from "../../assets/icons/navIconsBlack/recipesIcon.svg";
 import profileIcon from "../../assets/icons/navIconsBlack/profileIcon.svg";
 import fridgeIconOrange from "../../assets/icons/navIconsOrange/fridgeIconOrange.svg";
@@ -16,6 +17,7 @@ export const NavbarDesktop = () => {
   const [shoppingListOnHover, setShoppingListOnHover] = useState(false);
   const [recipesOnHover, setRecipesOnHover] = useState(false);
   const [profileOnHover, setProfileOnHover] = useState(false);
+  const [addOnHover, setAddOnHover] = useState(false);
 
   return (
     <div className="NavbarDesktop">
@@ -28,15 +30,17 @@ export const NavbarDesktop = () => {
           setFridgeOnHover(false);
         }}
       >
-        {fridgeOnHover ? (
-          <img src={fridgeIconOrange} className="NavBtnsDesktop" />
-        ) : (
-          <img src={fridgeIcon} className="NavBtnsDesktop" />
-        )}
-        <p>My Fridge</p>
+        <Link to="/my-fridgile/">
+          {fridgeOnHover ? (
+            <img src={fridgeIconOrange} className="NavBtnsDesktop" />
+          ) : (
+            <img src={fridgeIcon} className="NavBtnsDesktop" />
+          )}
+          <p>My Fridge</p>
+        </Link>
       </div>
       <div
-        className="NavBtnContainerDesktop NavBtnContainerShoppingListDesktop"
+        className="NavBtnContainerDesktop"
         onMouseEnter={() => {
           setShoppingListOnHover(true);
         }}
@@ -44,20 +48,36 @@ export const NavbarDesktop = () => {
           setShoppingListOnHover(false);
         }}
       >
-        {shoppingListOnHover ? (
-          <img src={shoppingListIconOrange} className="NavBtnsDesktop" />
-        ) : (
-          <img src={shoppingListIcon} className="NavBtnsDesktop" />
-        )}
-        <p>Shopping List</p>
+        <Link to="/my-fridgile/shoppingList">
+          {shoppingListOnHover ? (
+            <img src={shoppingListIconOrange} className="NavBtnsDesktop" />
+          ) : (
+            <img src={shoppingListIcon} className="NavBtnsDesktop" />
+          )}
+          <p>Shopping List</p>
+        </Link>
       </div>
-      <div className="NavBtnContainerDesktop NavBtnContainerMiddleDesktop">
-        <p>Add Food</p>
-        <div className="NavBtns NavBtnMiddleDesktop">
-          <Link to="/my-fridgile/add">
-            <img src={addIcon} alt="" />
-          </Link>
-        </div>
+      <div
+        className="NavBtnContainerDesktop middle"
+        onMouseEnter={() => {
+          setAddOnHover(true);
+        }}
+        onMouseLeave={() => {
+          setAddOnHover(false);
+        }}
+      >
+        <Link to="/my-fridgile/add">
+          <p>Add Food</p>
+          {addOnHover ? (
+            <img
+              src={addIconOrange}
+              alt=""
+              className="NavBtnMobileMiddleDesktop"
+            />
+          ) : (
+            <img src={addIcon} alt="" className="NavBtnMobileMiddleDesktop" />
+          )}
+        </Link>
       </div>
       <div
         className="NavBtnContainerDesktop"
@@ -68,12 +88,14 @@ export const NavbarDesktop = () => {
           setRecipesOnHover(false);
         }}
       >
-        {recipesOnHover ? (
-          <img src={recipesIconOrange} alt="" className="NavBtnsDesktop" />
-        ) : (
-          <img src={recipesIcon} alt="" className="NavBtnsDesktop" />
-        )}
-        <p>Recipes</p>
+        <Link to="/my-fridgile/recipes">
+          {recipesOnHover ? (
+            <img src={recipesIconOrange} alt="" className="NavBtnsDesktop" />
+          ) : (
+            <img src={recipesIcon} alt="" className="NavBtnsDesktop" />
+          )}
+          <p>Recipes</p>
+        </Link>
       </div>
       <div
         className="NavBtnContainerDesktop"
@@ -84,12 +106,14 @@ export const NavbarDesktop = () => {
           setProfileOnHover(false);
         }}
       >
-        {profileOnHover ? (
-          <img src={profileIconOrange} alt="" className="NavBtnsDesktop" />
-        ) : (
-          <img src={profileIcon} alt="" className="NavBtnsDesktop" />
-        )}
-        <p>My profile</p>
+        <Link to="/my-fridgile/myProfile">
+          {profileOnHover ? (
+            <img src={profileIconOrange} alt="" className="NavBtnsDesktop" />
+          ) : (
+            <img src={profileIcon} alt="" className="NavBtnsDesktop" />
+          )}
+          <p>My profile</p>
+        </Link>
       </div>
     </div>
   );

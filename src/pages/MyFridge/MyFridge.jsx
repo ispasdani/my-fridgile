@@ -10,11 +10,14 @@ import "./myFridge.css";
 import { RecipesWidget } from "../../components/RecipesWidget/RecipesWidget.jsx";
 import { DownloadWidget } from "../../components/DownloadWidget/DownloadWidget.jsx";
 import { AddCategoryPopup } from "../../components/AddCategoryPopup/AddCategoryPopup.jsx";
-import { AddCategoryPopupContext } from "../../components/contexts/addCategoryPopupContext";
+import { AddCategoryPopupContext } from "../../contexts/addCategoryPopupContext";
+import { useSaveings } from "../../contexts/savingContextx.jsx";
 
 export function Myfridge() {
   const [newCard, setNewCard] = useState("");
   const [popupAddCategory, setPopupAddCategory] = useState(false);
+  const { saveCategory } = useSaveings();
+
   return (
     <>
       <AddCategoryPopupContext.Provider
@@ -46,7 +49,17 @@ export function Myfridge() {
               <Card icon={Dairy} title={"Dairy"} />
               <Card icon={Meat} title={"Meat"} />
               <Card icon={Fish} title={"Fish"} />
-              {newCard && <Card title={newCard} />}
+              {saveCategory.length > 0 ? (
+                <div>
+                  {saveCategory.map((x) => {
+                    return <Card title={x.item} key={x.id} />;
+                  })}
+                </div>
+              ) : (
+                false
+              )}
+              {/* getting the data from localStorage
+              {newCard && <Card title={newCard} />} */}
             </div>
           </div>
           <div className="fridgeRightSide">

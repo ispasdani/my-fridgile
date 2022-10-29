@@ -6,19 +6,16 @@ export const UpdateComponent = ({
   updateTask,
   cancelUpdate,
 }) => {
+  console.log(updateData);
   return (
     <>
       <div className="updateItemContainer">
-        <input
-          value={updateData && updateData.item}
-          onChange={(e) => changeTask(e)}
-        />
-        <div className="updateBtns">
-          <button onClick={updateTask}>Update</button>
-          <button onClick={cancelUpdate}>Cancel</button>
-        </div>
+        <input value={updateData.title} onChange={(e) => changeTask(e)} />
       </div>
-      <br />
+      <div className="updateBtns">
+        <button onClick={updateTask}>Update</button>
+        <button onClick={cancelUpdate}>Cancel</button>
+      </div>
     </>
   );
 };

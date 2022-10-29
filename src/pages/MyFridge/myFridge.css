@@ -90,5 +90,10 @@
 
   .fridgeLeftSide {
     min-height: 70vh;
+    margin-bottom: 10vh;
+  }
+
+  .fridgeRightSide {
+    display: none;
   }
 }

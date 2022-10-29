@@ -1,7 +1,8 @@
 import "./cardContent.css";
 import useQuery from "../../hooks/getQueryHook";
-import { useSaveings } from "../contexts/savingContextx";
+import { useSaveings } from "../../contexts/savingContextx";
 import { CardItem } from "../cardItem/CardItem";
+import { CardForTest } from "../CardForTest/CardForTest";
 
 export const CardContent = () => {
   const { detectedItem } = useSaveings();
@@ -10,6 +11,14 @@ export const CardContent = () => {
   return (
     <div className="cardContent">
       <div className="cardContentTitle">{query.get("name")}</div>
+
+      {query.get("name") === "Fruits" && (
+        <div className="closeToExpireContainer">
+          <p className="testt">Food items close to expiring</p>
+          <CardForTest item="Broccoli" />
+          <div className="divider"></div>
+        </div>
+      )}
 
       {query.get("name") === "Meat" && (
         <div>

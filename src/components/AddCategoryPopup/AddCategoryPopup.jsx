@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
-import { AddCategoryPopupContext } from "../contexts/addCategoryPopupContext";
+import { AddCategoryPopupContext } from "../../contexts/addCategoryPopupContext";
+import { useSaveings } from "../../contexts/savingContextx";
 import "./addCategoryPopup.css";
 
 export const AddCategoryPopup = () => {
@@ -8,8 +9,14 @@ export const AddCategoryPopup = () => {
     AddCategoryPopupContext
   );
 
+  const { addCategory } = useSaveings();
+
   const handleChange = () => {
-    return setNewCard(takeInput), setPopupAddCategory(false);
+    return (
+      setNewCard(takeInput),
+      setPopupAddCategory(false),
+      addCategory({ item: takeInput })
+    );
   };
 
   return (
@@ -36,7 +43,3 @@ export const AddCategoryPopup = () => {
     </div>
   );
 };
-
-{
-  /*; */
-}

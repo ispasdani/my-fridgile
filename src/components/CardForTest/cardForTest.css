@@ -1,0 +1,117 @@
+.cardItem {
+  width: 500px;
+  height: 79.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dbeddd;
+  border-radius: 10px;
+  transition: 0.5s all ease-in-out;
+  border: solid #dbeddd 3px;
+  margin: 20px 0px 0px 0px;
+}
+
+.dotsContainer:hover {
+  transform: scale(1.4);
+}
+
+.cardItemContentContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cardItemContentTop {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardItemContentTop p {
+  font-family: "Clash Display", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0px 10px;
+}
+
+.dotsContainer {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s all ease-in-out;
+}
+
+.dotsContainer span {
+  width: 4px;
+  height: 4px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0px 1px;
+}
+
+.cardItemContentBottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.cardItemContentBottom p {
+  font-family: "Clash Display", sans-serif;
+  font-size: 15px;
+  margin: 5px 10px;
+}
+
+.cardItemStatBar {
+  width: 95%;
+  background-color: white;
+  height: 6px;
+  margin: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cardItemStatBarFill {
+  height: 6px;
+  border-radius: 5px;
+}
+
+.deleteSide {
+  width: 20%;
+  height: 100%;
+  background-color: red;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: solid red 3px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.deleteSide img {
+  transition: 0.3s all ease-in-out;
+}
+
+.deleteSide img:hover {
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 555px) {
+  .cardItem {
+    width: 320px;
+  }
+}

@@ -1,0 +1,91 @@
+/* written by Josip Brljevic */
+.recipe {
+  position: relative;
+  height: 222px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 600px) {
+  .recipe {
+    width: 537px;
+    height: 337px;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: center;
+}
+
+#carbonara {
+  background-image: url("../../assets/recipesimages/carbonara.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+#sweetpotato {
+  background-image: url("../../assets/recipesimages/sweetpotato.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+#muffin {
+  background-image: url("../../assets/recipesimages/muffin.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+#chickenwingdippers {
+  background-image: url("../../assets/recipesimages/chickenwingdippers.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+#turkeylunchbowl {
+  background-image: url("../../assets/recipesimages/turkeylunchbowl.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+#smoothie {
+  background-image: url("../../assets/recipesimages/smoothie.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.bottom {
+  width: 100%;
+  height: 35%;
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .recipe2 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .recipe {
+    margin: 40px;
+  }
+}

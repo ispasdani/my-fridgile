@@ -2,9 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   width: 90%;
-  height: 20%;
+  height: 5vh;
   background-color: #dbeddd;
   border: 3px solid #dbeddd;
   margin-bottom: 15px;
@@ -13,7 +12,7 @@
 
 .updateItemContainer input {
   width: 80%;
-  height: 8vh;
+  height: 5vh;
   padding: 5px;
   background-color: transparent;
   border: none;

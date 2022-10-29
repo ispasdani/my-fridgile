@@ -4,7 +4,7 @@ import { AddItemToListComponent } from "../../components/AddItemToList/AddItemIn
 import { ItemInListComponent } from "../../components/TodoComponent/ItemInListComponent";
 import { UpdateComponent } from "../../components/UpdateComponent/UpdateComponent";
 import shoppingListBackground from "../../assets/images/shoppingBackground.svg";
-import { useSaveings } from "../../components/contexts/savingContextx";
+import { useSaveings } from "../../contexts/savingContextx";
 
 export const ShoppingList = () => {
   const [toDo, setToDo] = useState([]);

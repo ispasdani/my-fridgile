@@ -1,0 +1,63 @@
+.cancel{
+    background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: #e57b07;
+  font-size: 15px;
+  display: flex;
+}
+
+.cancel p{
+    padding-right: 10px;
+}
+
+.titleandshareicon{
+    padding-top: 20px;
+    display: flex;
+}
+
+.ingredientstitle{
+    width: 50%;
+}
+
+.shareicon{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.titleandshareicon .ingredientstitle{
+    font-size: 35px;
+}
+
+.filterbuttons{
+    width: 50%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filterbuttons button{
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: #e57b07;
+  font-size: 15px;
+}
+
+.filterbuttons .active{
+    opacity: 1;
+}
+
+.filterbuttons .noactive{
+    opacity: 0.5;
+}

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import useLocalStorage from "../../hooks/useLocalStorage";
+import useLocalStorage from "../hooks/useLocalStorage";
 import { v4 as uuidv4 } from "uuid";
 
 const SaveingContext = React.createContext();
@@ -12,9 +12,16 @@ const SaveingProvider = ({ children }) => {
   const [detectedItem, setDetectedItem] = useLocalStorage("items", []);
   const [saveItemFromShoppingList, setSaveItemFromShoppingList] =
     useLocalStorage("sList", []);
+  const [saveCategory, setSaveCategory] = useLocalStorage("cate", []);
 
   function addDetectedItem({ item }) {
     setDetectedItem((prevItems) => {
+      return [...prevItems, { id: uuidv4(), item }];
+    });
+  }
+
+  function addCategory({ item }) {
+    setSaveCategory((prevItems) => {
       return [...prevItems, { id: uuidv4(), item }];
     });
   }
@@ -34,6 +41,8 @@ const SaveingProvider = ({ children }) => {
         saveItemFromShoppingList,
         setSaveItemFromShoppingList,
         saveItemToLocal,
+        addCategory,
+        saveCategory,
       }}
     >
       {children}

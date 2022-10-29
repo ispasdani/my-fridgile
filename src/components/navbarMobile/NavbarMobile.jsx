@@ -3,6 +3,7 @@ import "./navbarMobile.css";
 import fridgeIcon from "../../assets/icons/navIconsBlack/fridgeIcon.svg";
 import shoppingListIcon from "../../assets/icons/navIconsBlack/shoppingListIcon.svg";
 import addIcon from "../../assets/icons/navIconsBlack/addIcon.svg";
+import addIconOrange from "../../assets/icons/navIconsOrange/addIconOrange.svg";
 import recipesIcon from "../../assets/icons/navIconsBlack/recipesIcon.svg";
 import profileIcon from "../../assets/icons/navIconsBlack/profileIcon.svg";
 import fridgeIconOrange from "../../assets/icons/navIconsOrange/fridgeIconOrange.svg";
@@ -16,111 +17,102 @@ export const NavbarMobile = () => {
   const [shoppingListOnHover, setShoppingListOnHover] = useState(false);
   const [recipesOnHover, setRecipesOnHover] = useState(false);
   const [profileOnHover, setProfileOnHover] = useState(false);
-  const [openMobileNav, setOpenMobileNav] = useState(false);
-
-  const openMobileNavOnClick = () => {
-    setOpenMobileNav(true);
-
-    setTimeout(() => {
-      setOpenMobileNav(false);
-    }, 5000);
-  };
+  const [addOnHover, setAddOnHover] = useState(false);
 
   return (
     <>
-      {openMobileNav ? (
-        <div className="NavbarMobile">
-          <div
-            className="NavBtnContainerMobile"
-            onMouseEnter={() => {
-              setFridgeOnHover(true);
-            }}
-            onMouseLeave={() => {
-              setFridgeOnHover(false);
-            }}
-          >
-            <Link to="/my-fridgile/">
-              {fridgeOnHover ? (
-                <img src={fridgeIconOrange} className="NavBtnsMobile" />
-              ) : (
-                <img src={fridgeIcon} className="NavBtnsMobile" />
-              )}
-              <p>My Fridge</p>
-            </Link>
-          </div>
-          <div
-            className="NavBtnContainerMobile NavBtnContainerMobileShoppingList"
-            onMouseEnter={() => {
-              setShoppingListOnHover(true);
-            }}
-            onMouseLeave={() => {
-              setShoppingListOnHover(false);
-            }}
-          >
-            <Link to="/my-fridgile/shoppingList">
-              {shoppingListOnHover ? (
-                <img src={shoppingListIconOrange} className="NavBtnsMobile" />
-              ) : (
-                <img src={shoppingListIcon} className="NavBtnsMobile" />
-              )}
-              <p>Shopping List</p>
-            </Link>
-          </div>
-          <div className="NavBtnContainerMobile ">
-            <Link to="/my-fridgile/add">
-              <img
-                src={addIcon}
-                alt=""
-                className="NavBtnsMobile NavBtnMobileMiddle"
-              />
-              <p>Add Food</p>
-            </Link>
-          </div>
-          <div
-            className="NavBtnContainerMobile"
-            onMouseEnter={() => {
-              setRecipesOnHover(true);
-            }}
-            onMouseLeave={() => {
-              setRecipesOnHover(false);
-            }}
-          >
+      <div className="NavbarMobile">
+        <div
+          className="NavBtnContainerMobile"
+          onMouseEnter={() => {
+            setFridgeOnHover(true);
+          }}
+          onMouseLeave={() => {
+            setFridgeOnHover(false);
+          }}
+        >
+          <Link to="/my-fridgile/">
+            {fridgeOnHover ? (
+              <img src={fridgeIconOrange} className="NavBtnsMobile" />
+            ) : (
+              <img src={fridgeIcon} className="NavBtnsMobile" />
+            )}
+            <p>My Fridge</p>
+          </Link>
+        </div>
+        <div
+          className="NavBtnContainerMobile"
+          onMouseEnter={() => {
+            setShoppingListOnHover(true);
+          }}
+          onMouseLeave={() => {
+            setShoppingListOnHover(false);
+          }}
+        >
+          <Link to="/my-fridgile/shoppingList">
+            {shoppingListOnHover ? (
+              <img src={shoppingListIconOrange} className="NavBtnsMobile" />
+            ) : (
+              <img src={shoppingListIcon} className="NavBtnsMobile" />
+            )}
+            <p>Shopping List</p>
+          </Link>
+        </div>
+        <div
+          className="NavBtnContainerMobile"
+          onMouseEnter={() => {
+            setAddOnHover(true);
+          }}
+          onMouseLeave={() => {
+            setAddOnHover(false);
+          }}
+        >
+          <Link to="/my-fridgile/add">
+            {addOnHover ? (
+              <img src={addIconOrange} alt="" className="NavBtnMobileMiddle" />
+            ) : (
+              <img src={addIcon} alt="" className="NavBtnMobileMiddle" />
+            )}
+            <p>Add Food</p>
+          </Link>
+        </div>
+        <div
+          className="NavBtnContainerMobile"
+          onMouseEnter={() => {
+            setRecipesOnHover(true);
+          }}
+          onMouseLeave={() => {
+            setRecipesOnHover(false);
+          }}
+        >
+          <Link to="/my-fridgile/recipes">
             {recipesOnHover ? (
               <img src={recipesIconOrange} alt="" className="NavBtnsMobile" />
             ) : (
               <img src={recipesIcon} alt="" className="NavBtnsMobile" />
             )}
             <p>Recipes</p>
-          </div>
-          <div
-            className="NavBtnContainerMobile"
-            onMouseEnter={() => {
-              setProfileOnHover(true);
-            }}
-            onMouseLeave={() => {
-              setProfileOnHover(false);
-            }}
-          >
-            <Link to="/my-fridgile/myProfile">
-              {profileOnHover ? (
-                <img src={profileIconOrange} alt="" className="NavBtnsMobile" />
-              ) : (
-                <img src={profileIcon} alt="" className="NavBtnsMobile" />
-              )}
-              <p>My profile</p>
-            </Link>
-          </div>
+          </Link>
         </div>
-      ) : (
         <div
-          className="ClosedMobileNavbar"
-          onClick={() => {
-            openMobileNavOnClick();
+          className="NavBtnContainerMobile"
+          onMouseEnter={() => {
+            setProfileOnHover(true);
+          }}
+          onMouseLeave={() => {
+            setProfileOnHover(false);
           }}
         >
-          <span></span>
+          <Link to="/my-fridgile/myProfile">
+            {profileOnHover ? (
+              <img src={profileIconOrange} alt="" className="NavBtnsMobile" />
+            ) : (
+              <img src={profileIcon} alt="" className="NavBtnsMobile" />
+            )}
+            <p>My profile</p>
+          </Link>
         </div>
-      )}
+      </div>
     </>
   );
 };

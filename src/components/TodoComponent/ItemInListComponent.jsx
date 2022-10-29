@@ -50,7 +50,7 @@ export const ItemInListComponent = ({
               onClick={() =>
                 setUpdateData({
                   id: toDo.id,
-                  title: toDo.title,
+                  title: toDo.item,
                   status: toDo.status ? true : false,
                 })
               }

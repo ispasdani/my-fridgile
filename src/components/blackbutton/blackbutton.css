@@ -1,0 +1,35 @@
+/* written by Josip Brljevic */
+
+.blackbutton{
+    background-color: #272727;
+    color: white;
+    border-radius: 20px;
+    width: 100%;
+    height: 50px;
+    border-style: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.blackbuttons a{
+ width: 45%;
+ display: flex;
+ justify-content: space-between;
+}
+
+.blackbutton:hover{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+
+.blackbuttons a{
+    width: 50%;
+}
+}
+
+.blackbutton img{
+    padding-left: 10px;
+}

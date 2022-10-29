@@ -7,6 +7,19 @@
   flex-direction: column;
 }
 
+.shoppinglistItemsContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.shoppingListImgBackground {
+  margin-top: 10vh;
+}
+
 .shoppingListTitle {
   width: 90%;
   height: auto;

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSaveings } from "../contexts/savingContextx";
+import { useSaveings } from "../../contexts/savingContextx";
 import "./cardItem.css";
 import TrashIcon from "../../assets/icons/trashIcon.svg";
 
