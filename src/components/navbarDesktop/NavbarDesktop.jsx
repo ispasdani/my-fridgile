@@ -1,3 +1,4 @@
+/* written by Ispas Daniel Nicolae */
 import { useState } from "react";
 import "./navbarDesktop.css";
 import fridgeIcon from "../../assets/icons/navIconsBlack/fridgeIcon.svg";

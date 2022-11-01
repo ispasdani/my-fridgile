@@ -1,3 +1,4 @@
+/* written by Ispas Daniel Nicolae */
 import { useEffect, useState } from "react";
 import { useSaveings } from "../../contexts/savingContextx";
 import "./cardItem.css";
@@ -13,6 +14,7 @@ export const CardItem = ({ item, ide }) => {
 
   const expirationDateBanana = 5;
   const expirationDateCheeseburger = 3;
+  const expirationDateForPineapple = 13;
 
   const d = new Date();
   const currentDayDate = d.getDate();
@@ -30,9 +32,15 @@ export const CardItem = ({ item, ide }) => {
       expirationDatePercentage = (expirationDateBanana / currentDayDate) * 100;
     }
     if (item === "cheeseburger") {
-      setExpiryDateItem(expirationDateBanana);
+      setExpiryDateItem(expirationDateCheeseburger);
       expirationDatePercentage =
         (expirationDateCheeseburger / currentDayDate) * 100;
+    }
+
+    if (item === "pineapple, ananas") {
+      setExpiryDateItem(expirationDateForPineapple);
+      expirationDatePercentage =
+        (expirationDateForPineapple / currentDayDate) * 100;
     }
     return setPercentage(expirationDatePercentage);
   };
@@ -68,7 +76,7 @@ export const CardItem = ({ item, ide }) => {
             <div
               className="cardItemStatBarFill"
               style={{
-                width: `${percentage}%`,
+                width: `${20}%`,
                 backgroundColor: `${statBarColor}`,
               }}
             ></div>

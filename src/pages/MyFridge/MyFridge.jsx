@@ -1,3 +1,4 @@
+/* written by Oliwia Olender */
 import React, { useState } from "react";
 import { Card } from "../../components/Card/Card.jsx";
 import Carrot from "../../assets/images/carrot.svg";
@@ -12,6 +13,7 @@ import { DownloadWidget } from "../../components/DownloadWidget/DownloadWidget.j
 import { AddCategoryPopup } from "../../components/AddCategoryPopup/AddCategoryPopup.jsx";
 import { AddCategoryPopupContext } from "../../contexts/addCategoryPopupContext";
 import { useSaveings } from "../../contexts/savingContextx.jsx";
+import myFridgeIcon from "../../assets/images/myFridgeIcon.svg";
 
 export function Myfridge() {
   const [newCard, setNewCard] = useState("");
@@ -25,6 +27,7 @@ export function Myfridge() {
       >
         {popupAddCategory && <AddCategoryPopup />}
         <div className="myFridge">
+          <img src={myFridgeIcon} alt="" className="myFridgeIcon" />
           <div className="fridgeLeftSide">
             <div className="fridgeTitle">
               <p>My Fridge</p>
@@ -33,6 +36,11 @@ export function Myfridge() {
               <p>Click on the category to see and add items</p>
             </div>
             <div className="fridgeCategories">
+              <Card icon={Carrot} title={"Vegetables"} />
+              <Card icon={Banana} title={"Fruits"} />
+              <Card icon={Dairy} title={"Dairy"} />
+              <Card icon={Meat} title={"Meat"} />
+              <Card icon={Fish} title={"Fish"} />
               <div
                 className="addCardCategory"
                 onClick={() => {
@@ -43,12 +51,6 @@ export function Myfridge() {
                   <img src={Plus} alt="category icon"></img>
                 </div>
               </div>
-
-              <Card icon={Carrot} title={"Vegetables"} />
-              <Card icon={Banana} title={"Fruits"} />
-              <Card icon={Dairy} title={"Dairy"} />
-              <Card icon={Meat} title={"Meat"} />
-              <Card icon={Fish} title={"Fish"} />
               {saveCategory.length > 0 ? (
                 <div>
                   {saveCategory.map((x) => {

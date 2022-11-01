@@ -1,3 +1,4 @@
+/* written by Anastasia Bunduc */
 import "./addItemToList.css";
 
 export const AddItemToListComponent = ({

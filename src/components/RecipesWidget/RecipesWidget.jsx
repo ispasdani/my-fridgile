@@ -1,3 +1,4 @@
+/* written by Oliwia Olender */
 import "./recipesWidget.css";
 import recipesGraphic from "../../assets/images/man.svg";
 

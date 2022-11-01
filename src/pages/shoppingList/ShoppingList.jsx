@@ -1,3 +1,4 @@
+/* written by Anastasia Bunduc */
 import "./shoppingList.css";
 import { useState, useRef } from "react";
 import { AddItemToListComponent } from "../../components/AddItemToList/AddItemInListComponent";

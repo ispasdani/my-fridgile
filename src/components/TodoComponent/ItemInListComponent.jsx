@@ -1,3 +1,5 @@
+/* written by Anastasia Bunduc */
+
 import { useState } from "react";
 import "./itemInList.css";
 import checkIconBlack from "../../assets/icons/checkBlack.svg";

@@ -4,6 +4,63 @@
   align-items: center;
   background-color: white;
   height: 6vh;
+  position: relative;
+}
+
+.popupBar {
+  position: absolute;
+  top: 6vh;
+  right: 5vh;
+  background-color: white;
+  height: 30vh;
+  width: 70%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 2px 2px 10px 1px black;
+}
+.logo {
+  width: 100px;
+}
+
+.prefIcon {
+  margin-right: 15px;
+}
+
+.popupBarContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Clash Display", sans-serif;
+  margin: 10px 0px;
+}
+
+.popupBarContent p {
+  margin: 0px;
+  margin-left: 10px;
+}
+
+.checkIcon {
+  width: 50px;
+  height: 30px;
+  border-radius: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.ball {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0px 2px;
 }
 
 .preferencesBar h2 {
@@ -13,7 +70,7 @@
   font-weight: 400;
 }
 
-.preferencesBar div {
+.catt {
   margin: 0px 5%;
   cursor: pointer;
 }

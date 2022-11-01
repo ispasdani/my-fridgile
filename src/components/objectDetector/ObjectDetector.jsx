@@ -1,3 +1,4 @@
+/* written by Ispas Daniel Nicolae */
 import { useState, useEffect, useRef } from "react";
 import "./objectDetector.css";
 import "@tensorflow/tfjs-backend-webgl";

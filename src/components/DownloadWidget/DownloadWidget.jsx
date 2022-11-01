@@ -1,3 +1,4 @@
+/* written by Oliwia Olender */
 import "./downloadWidget.css";
 
 export const DownloadWidget = () => {

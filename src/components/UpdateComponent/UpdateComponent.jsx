@@ -1,3 +1,4 @@
+/* written by Anastasia Bunduc */
 import "./updateComponent.css";
 
 export const UpdateComponent = ({

@@ -1,3 +1,4 @@
+/* written by Oliwia Olender */
 import "./card.css";
 import { useNavigate } from "react-router-dom";
 

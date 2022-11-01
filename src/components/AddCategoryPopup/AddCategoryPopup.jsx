@@ -1,3 +1,4 @@
+/* written by Oliwia Olender */
 import React, { useContext, useState } from "react";
 import { AddCategoryPopupContext } from "../../contexts/addCategoryPopupContext";
 import { useSaveings } from "../../contexts/savingContextx";

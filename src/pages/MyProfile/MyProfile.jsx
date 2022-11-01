@@ -1,3 +1,4 @@
+/* written by Ispas Daniel Nicolae */
 import { useState } from "react";
 import "./myProfile.css";
 import editIconBlack from "../../assets/icons/editIconBlack.svg";

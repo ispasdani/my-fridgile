@@ -8,6 +8,14 @@
   overflow-y: scroll;
 }
 
+.myFridgeIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 100px;
+}
+
 .fridgeLeftSide {
   width: 50%;
   min-height: 90vh;

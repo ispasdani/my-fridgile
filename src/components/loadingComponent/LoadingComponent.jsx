@@ -1,3 +1,4 @@
+/* written by Ispas Daniel Nicolae */
 import "./loadingComponent.css";
 
 export const LoadingComponent = () => {

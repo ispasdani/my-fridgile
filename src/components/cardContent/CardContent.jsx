@@ -1,3 +1,4 @@
+/* written by Oliwia Olender */
 import "./cardContent.css";
 import useQuery from "../../hooks/getQueryHook";
 import { useSaveings } from "../../contexts/savingContextx";
@@ -15,7 +16,7 @@ export const CardContent = () => {
       {query.get("name") === "Fruits" && (
         <div className="closeToExpireContainer">
           <p className="testt">Food items close to expiring</p>
-          <CardForTest item="Broccoli" />
+          <CardForTest item="Pear" />
           <div className="divider"></div>
         </div>
       )}
@@ -33,7 +34,7 @@ export const CardContent = () => {
       {query.get("name") === "Fruits" && (
         <div>
           {detectedItem.map((item) => {
-            if (item.item === "banana" || item.item === "cheeseburger") {
+            if (item.item === "banana" || item.item === "pineapple, ananas") {
               return <CardItem item={item.item} ide={item.id} key={item.id} />;
             }
           })}

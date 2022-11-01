@@ -1,3 +1,4 @@
+/* written by Ispas Daniel Nicolae */
 import { useEffect, useState } from "react";
 
 export default function useLocalStorage(key, defaultValue) {

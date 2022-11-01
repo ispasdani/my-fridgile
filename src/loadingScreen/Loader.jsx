@@ -1,3 +1,4 @@
+/* written by Ispas Daniel Nicolae */
 import "./loader.css";
 import { motion, AnimatePresence } from "framer-motion";
 

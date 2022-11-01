@@ -1,3 +1,4 @@
+/* written by Ispas Daniel Nicolae */
 import "./cardForTest.css";
 import TrashIcon from "../../assets/icons/trashIcon.svg";
 import { useState } from "react";
@@ -20,7 +21,7 @@ export const CardForTest = ({ item }) => {
           </div>
         </div>
         <div className="cardItemContentBottom">
-          <p>{`Expires in 1 days`}</p>
+          <p>{`Expires in 5 days`}</p>
           <div className="cardItemStatBar">
             <div
               className="cardItemStatBarFill"

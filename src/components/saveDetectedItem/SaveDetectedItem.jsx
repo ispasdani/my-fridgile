@@ -1,3 +1,4 @@
+/* written by Ispas Daniel Nicolae */
 import "./saveDetectedItem.css";
 import { useSaveings } from "../../contexts/savingContextx";
 import { useRef } from "react";
