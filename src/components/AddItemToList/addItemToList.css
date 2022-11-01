@@ -1,9 +1,21 @@
+@font-face {
+  font-family: "General Sans";
+  font-weight: normal;
+  src: "./fonts/GeneralSans-Regular.OTF" format("opentype");
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-weight: bold;
+  src: "./fonts/GeneralSans-Medium.OTF" format("opentype");
+}
+
 .addItemToListContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  height: 5vh;
+  height: 6.3vh;
   background-color: #dbeddd;
   border: 3px solid #dbeddd;
   margin-bottom: 15px;
@@ -12,11 +24,13 @@
 
 .addItemToListContainer input {
   width: 70%;
-  padding: 10px 5px;
+  padding: 10px 20px;
   background-color: transparent;
   border: none;
   color: #2c2c2c;
   outline: none;
+  font-family: "General Sans";
+  font-weight: normal;
 }
 
 .addItemToListContainer button {

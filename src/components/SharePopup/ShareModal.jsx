@@ -25,7 +25,7 @@ export default function ShareModal() {
   }
 
   return (
-    <>
+    <div className="zindex">
       <button onClick={toggleModal} className="btn-modal">
         <img src={ShareIcon} alt="shareicon"></img>
       </button>
@@ -71,6 +71,6 @@ export default function ShareModal() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }

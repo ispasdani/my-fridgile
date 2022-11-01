@@ -2,6 +2,10 @@ body.active-modal {
   overflow-y: hidden;
 }
 
+.zindex {
+  z-index: 2;
+}
+
 .btn-modal {
   padding: 10px 20px;
   display: block;
@@ -55,33 +59,32 @@ body.active-modal {
   padding: 5px 7px;
 }
 
-.share
-{
-    font-size: 30px;
+.share {
+  font-size: 30px;
 }
 
-.sharetext{
-    font-size: 12px;
+.sharetext {
+  font-size: 12px;
 }
 
-.socialicons{
-    height: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.socialicons {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.socialmediaicon-text p{
-    font-size: 10px;
+.socialmediaicon-text p {
+  font-size: 10px;
 }
 
-.socialmediaicon-text{
-    height: 40%;
+.socialmediaicon-text {
+  height: 40%;
 }
 
-.socialiconcontainer{
-    height: 120%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.socialiconcontainer {
+  height: 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

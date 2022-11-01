@@ -1,48 +1,4 @@
-.cancel{
-    background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  color: #e57b07;
-  font-size: 15px;
-  display: flex;
-}
-
-.cancel p{
-    padding-right: 10px;
-}
-
-.titleandshareicon{
-    padding-top: 20px;
-    display: flex;
-}
-
-.ingredientstitle{
-    width: 50%;
-}
-
-.shareicon{
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.titleandshareicon .ingredientstitle{
-    font-size: 35px;
-}
-
-.filterbuttons{
-    width: 50%;
-    padding-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.filterbuttons button{
+.cancel {
   background: none;
   color: inherit;
   border: none;
@@ -51,13 +7,108 @@
   cursor: pointer;
   outline: inherit;
   color: #e57b07;
-  font-size: 15px;
+  font-size: 30px;
+  display: flex;
 }
 
-.filterbuttons .active{
-    opacity: 1;
+.cancel p {
+  padding-right: 10px;
 }
 
-.filterbuttons .noactive{
-    opacity: 0.5;
+.titleandshareicon {
+  padding-top: 20px;
+  display: flex;
+}
+
+.page .ingredientstitle {
+  width: 50%;
+  font-size: 60px;
+}
+
+@media only screen and (max-width: 1180px) {
+  .page .ingredientstitle {
+    font-size: 35px;
+  }
+
+  .page .cancel {
+    font-size: 15px;
+  }
+
+  .page .filterbuttons button {
+    font-size: 15px;
+  }
+
+  .page .textandaddall .clickplustext {
+    font-size: 15px;
+  }
+
+  .page .textandaddall button {
+    font-size: 15px;
+  }
+
+  .page .filterbuttons {
+    width: 50%;
+  }
+
+  .page .filterbuttons {
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+}
+
+.shareicon {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.filterbuttons {
+  width: 30%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterbuttons button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: #e57b07;
+  font-size: 30px;
+}
+
+.filterbuttons .active {
+  opacity: 1;
+}
+
+.filterbuttons .noactive {
+  opacity: 0.5;
+}
+
+.textandaddall {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.textandaddall .clickplustext {
+  font-size: 30px;
+}
+
+.textandaddall button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: #e57b07;
+  font-size: 30px;
 }

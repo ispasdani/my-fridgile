@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "General Sans";
+  font-weight: normal;
+  src: "./fonts/GeneralSans-Regular.OTF" format("opentype");
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-weight: bold;
+  src: "./fonts/GeneralSans-Medium.OTF" format("opentype");
+}
+
 .itemListContainer {
   width: 100%;
   display: flex;
@@ -15,6 +27,8 @@
   background-color: #dbeddd;
   border-radius: 10px;
   margin: 5px 0px;
+  font-family: "General Sans";
+  font-weight: normal;
 }
 
 .notDone {
@@ -23,6 +37,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  font-family: "General Sans";
+  font-weight: normal;
 }
 
 .done {
@@ -32,6 +48,8 @@
   justify-content: flex-start;
   align-items: center;
   text-decoration: line-through;
+  font-family: "General Sans";
+  font-weight: normal;
 }
 
 .itemInListIcons {

@@ -2,52 +2,65 @@
     written by Josip Brljevic
 */
 
-.recipeproduct{
-    width: 100%;
-    background-color: #DBEDDD;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    border-radius: 10px;
+.recipeproduct {
+  background-color: #dbeddd;
+  width: 103px;
+  height: 105px;
+  margin-top: 10px;
+  margin-right: 10px;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media only screen and (min-width: 1180px){
-    .recipeproduct{
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.addicon img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -10px;
+  margin-right: -10px;
+  width: 27px;
+  height: 27px;
 }
 
-.counter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.recipeproductdata {
+  width: 50%;
 }
 
-.recipeproductdata{
-    width: 40%;
-    
+.recipeproductdata a {
+  font-size: 20px;
 }
 
-.recipeproductdata a{
-    font-size: 20px;
+.recipeproductdata p,
+.expirationtime p {
+  text-align: center;
 }
 
-.quantity{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.recipeproductdata {
+  margin-bottom: 20px;
+}
+
+.expirationtime {
+  background-color: #ff9898;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.addicon {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1180px) {
+  .expirationtime p {
+    font-size: 12px;
   }
-
-.addicon{
-    width: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.quantity img{
-    padding: 10px;
 }

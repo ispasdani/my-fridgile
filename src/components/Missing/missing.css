@@ -1,0 +1,38 @@
+/*
+    written by Josip Brljevic
+    this css applies to Missing, Found and Allingredients components
+*/
+
+.itemflex {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.itemflexbox {
+  background-color: #dbeddd;
+  width: 102px;
+  height: 106px;
+  margin-top: 10px;
+  margin-right: 15px;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemflexbox img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -10px;
+  margin-right: -10px;
+  width: 27px;
+  height: 27px;
+}
+
+.itemflexbox p {
+  width: 80%;
+  text-align: center;
+}

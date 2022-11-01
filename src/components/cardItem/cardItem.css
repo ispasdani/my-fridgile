@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "General Sans";
+  font-weight: normal;
+  src: "../../fonts/GeneralSans-Regular.OTF" format("opentype");
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-weight: bold;
+  src: "../../fonts/GeneralSans-Medium.OTF" format("opentype");
+}
+
 .cardItem {
   width: 500px;
   height: 79.5px;
@@ -9,6 +21,8 @@
   transition: 0.5s all ease-in-out;
   border: solid #dbeddd 3px;
   margin: 20px 0px 0px 0px;
+  font-family: "General Sans";
+  font-weight: normal;
 }
 
 .dotsContainer:hover {
@@ -33,8 +47,8 @@
 }
 
 .cardItemContentTop p {
-  font-family: "Clash Display", sans-serif;
-  font-weight: bold;
+  font-family: "General Sans";
+  font-weight: normal;
   font-size: 18px;
   margin: 0px 10px;
 }
@@ -66,8 +80,8 @@
 }
 
 .cardItemContentBottom p {
-  font-family: "Clash Display", sans-serif;
-  font-size: 15px;
+  font-family: "General Sans";
+  font-weight: normal;
   margin: 5px 10px;
 }
 

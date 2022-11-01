@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "General Sans";
+  font-weight: normal;
+  src: "../../fonts/GeneralSans-Regular.OTF" format("opentype");
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-weight: bold;
+  src: "../../fonts/GeneralSans-Medium.OTF" format("opentype");
+}
+
 .NavbarMobile {
   display: flex;
   justify-content: space-between;
@@ -13,7 +25,8 @@
   transition: 0.5s all ease-in-out;
   z-index: 1;
   background-color: white;
-  font-family: "Clash Display", sans-serif;
+  font-family: "General Sans";
+  font-weight: normal;
 }
 
 .NavBtnContainerMobile {
@@ -40,6 +53,8 @@
 .NavBtnContainerMobile p {
   margin: 0;
   padding: 0;
+  font-family: "General Sans";
+  font-weight: normal;
 }
 
 .NavBtnsMobile {

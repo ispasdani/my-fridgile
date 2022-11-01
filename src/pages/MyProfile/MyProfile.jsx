@@ -1,4 +1,4 @@
-/* written by Ispas Daniel Nicolae */
+/* written by Anastasia Bunduc */
 import { useState } from "react";
 import "./myProfile.css";
 import editIconBlack from "../../assets/icons/editIconBlack.svg";

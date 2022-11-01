@@ -1,5 +1,19 @@
+@import url("http://fonts.cdnfonts.com/css/clash-display");
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-weight: normal;
+  src: "./fonts/GeneralSans-Regular.OTF" format("opentype");
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-weight: bold;
+  src: "./fonts/GeneralSans-Medium.OTF" format("opentype");
 }

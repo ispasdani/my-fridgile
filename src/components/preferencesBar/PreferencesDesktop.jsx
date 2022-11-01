@@ -4,7 +4,7 @@ import preferencesBlack from "../../assets/icons/preferences/preferences.svg";
 import preferencesOrange from "../../assets/icons/preferences/preferencesOrange.svg";
 import "./preferences.css";
 import prefIconBtn from "../../assets/icons/arrowBar.svg";
-import logo from "../../assets/log.svg";
+import logo from "../../assets/loggo.png";
 
 export const PreferencesBarDesktop = () => {
   const [prefOnHover, setPrefOnHover] = useState(false);
@@ -15,8 +15,8 @@ export const PreferencesBarDesktop = () => {
 
   return (
     <div className="preferencesBar">
-      <h2 className="titleHeartbeat">Fridgile</h2>
-      {/* <img src={logo} className="logo" /> */}
+      {/* <h2 className="titleHeartbeat">Fridgile</h2> */}
+      <img src={logo} className="logo" />
       <div
         className="catt"
         onMouseEnter={() => {

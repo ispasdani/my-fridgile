@@ -19,6 +19,8 @@
 .titleandicon p {
   width: 90%;
   font-size: 60px;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 500;
 }
 
 .image {

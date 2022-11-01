@@ -4,53 +4,50 @@
 */
 
 import { useState } from "react";
-import AddIcon from "../../assets/recipesimages/add.svg";
-import MinusQuantity from "../../assets/recipesimages/minus.svg";
-import PlusQuantity from "../../assets/recipesimages/plus.svg";
-import Checked from "../../assets/recipesimages/checked.svg";
+import AddIcon2 from "../../assets/recipesimages/add3.png";
+import Checked from "../../assets/recipesimages/checked.png";
 import "./recipeproducts.css";
 
-export default function RecipeProduct() {
-  const [counter, setCounter] = useState(1);
-  const incrementCounter = () => setCounter(counter + 1);
-  const decrementCounter = () => setCounter(counter - 1);
+export default function RecipeProduct(props) {
+  const [display1, setDisplay1] = useState(true);
 
-  const [isChecked, setIsChecked] = useState(false);
+  const displayCheck = (e) => {
+    setDisplay1(!display1);
 
-  const toggleCheck = () => {
-    setIsChecked(!isChecked);
+    document.getElementById("empty").classList.add("hidden");
+
+    //this part moves the clicked item to the div on the prodcuts page by using the function append()
+    let tagg = document.getElementById(props.tag);
+    document.getElementById("selected").append(tagg);
   };
 
-  const checkbox = isChecked ? Checked : AddIcon;
-
   return (
-    <div className="recipeproduct">
-      <div className="addicon">
-        <img src={checkbox} alt="add" onClick={toggleCheck}></img>
-      </div>
-      <div className="recipeproductdata">
-        <p>Map the data here</p>
-      </div>
-
-      <div className="quantity">
-        <img
-          style={{ cursor: "pointer" }}
-          onClick={decrementCounter}
-          src={MinusQuantity}
-          alt="minus"
-        />
-
-        <div className="counter">
-          <p>{counter}</p>
+    <div>
+      {display1 ? (
+        <div className="recipeproduct" id={props.tag}>
+          <div className="addicon">
+            <img src={AddIcon2} alt="add" onClick={displayCheck} id="ajj"></img>
+          </div>
+          <div className="recipeproductdata">
+            <p>{props.name}</p>
+          </div>
+          <div className="expirationtime">
+            <p>{props.time} days left</p>
+          </div>
         </div>
-
-        <img
-          style={{ cursor: "pointer" }}
-          onClick={incrementCounter}
-          src={PlusQuantity}
-          alt="plus"
-        />
-      </div>
+      ) : (
+        <div className="recipeproduct">
+          <div className="addicon">
+            <img src={Checked} alt="add"></img>
+          </div>
+          <div className="recipeproductdata">
+            <p>{props.name}</p>
+          </div>
+          <div className="expirationtime">
+            <p>{props.time} days left</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
