@@ -1,5 +1,3 @@
-@import url("http://fonts.cdnfonts.com/css/clash-display");
-
 body {
   margin: 0;
   padding: 0;
@@ -16,4 +14,10 @@ body {
   font-family: "General Sans";
   font-weight: bold;
   src: "./fonts/GeneralSans-Medium.OTF" format("opentype");
+}
+
+@font-face {
+  font-family: "Clash Display";
+  font-weight: normal;
+  src: "./fonts/ClashDisplay-Medium.OTF" format("opentype");
 }
