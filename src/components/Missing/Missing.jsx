@@ -3,7 +3,7 @@
     A component that displays the matching items from your items in the fridge with the recipe items
 */
 
-import "./Missing.css";
+import "./missing.css";
 import AddIcon2 from "../../assets/recipesimages/add3.png";
 import Checked from "../../assets/recipesimages/checked.png";
 import { useState } from "react";
